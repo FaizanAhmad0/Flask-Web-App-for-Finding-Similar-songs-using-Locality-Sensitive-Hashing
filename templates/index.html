@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDA Assignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        h2 {
+            font-family: 'Orbitron', sans-serif; font-size: 30px;
+            margin-bottom: -10px;
+        }
+
+        p {
+            font-family: 'poppins';
+        }
+        .main-container-center {
+            margin-top: 120px;
+            text-align: center;
+        }
+
+        .button-analyse {
+            margin-top: 20px;
+        }
+
+        .button-analyse button {
+            border-radius: 0;
+            width: 100px;
+            height: 40px;
+            color: white;
+            background-color: black;
+            font-family: 'Alegreya Sans', sans-serif;
+            font-weight: bold;
+        }
+
+        .input-path input {
+            width : 350px;
+            height: 40px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container-center">
+        <div class="hero-section">
+            <h2>Audio Similarity Checker</h2>
+            <p>This program checks similarities of the audios</p>
+        </div>
+        <form action="{{ url_for('analyse') }}" method="post">
+            <div class="input-path">
+                <input type="text" name="file_path" placeholder="Enter Your File Path Here" class="">
+            </div>
+            <div class="button-analyse">
+                <button type="submit"> Analyse</button>
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
